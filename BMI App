@@ -1,0 +1,32 @@
+from tkinter import * 
+import random
+
+w=Tk()
+w.geometry('500x500')
+w.configure(bg="black")
+w.title("BMI Calculator")
+a=Label(text="Height")
+a.place(x=50,y=50)
+H=StringVar() #Var mean variable ,could also be intVar
+b=Entry(text=H)
+b.place(x=100,y=50)
+d=Label(text="Weight")
+d.place(x=45,y=100)
+We=StringVar() #Var mean variable ,could also be intVar
+v=Entry(text=We)
+v.place(x=100,y=100)
+def BMIC():
+    Height=float(H.get())
+    Weight=float(We.get())
+    Height=Height/100
+    s=Weight//Height**2
+    e=Label(text=s)
+    e.place(x=50,y=200)  
+    if s>25:
+       Label(text="Overweight").place(x=50,y=250)
+    else:
+        Label(text="Underwight").place(x=50,y=250)
+     
+j=Button(text="BMI",command=BMIC)
+j.place(x=50,y=150)
+mainloop()
