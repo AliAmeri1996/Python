@@ -61,8 +61,8 @@ chosen_word=random.choice(word_list)
 lives=6
 
 display=[]
-for i in (chosen_word): #OR for in in range (len(chosen_word))
-   display.append("_")# OR diplay+=1
+for i in (chosen_word): 
+   display.append("_")
 print(display)
 
 end_of_game=False
