@@ -59,7 +59,6 @@ stages = ['''
 word_list=["alarm","bridge","maze","eiffel"]
 chosen_word=random.choice(word_list)
 lives=6
-print(f'Pssst, the solution is {chosen_word}.')
 
 display=[]
 for i in (chosen_word): #OR for in in range (len(chosen_word))
