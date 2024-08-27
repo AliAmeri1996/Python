@@ -1,0 +1,60 @@
+from tkinter import *
+
+window=Tk()
+window.title("Conversion")
+window.minsize(500,300)
+
+
+
+
+
+
+miles=Label(text="Miles",font=("Ariel",12,"bold"))
+miles.place(x=250,y=55)
+
+
+km=Label(text="Km", font=("Ariel",12,"bold"))
+km.place(x=250,y=80)
+
+equal=Label(text="is equal to:",font=("Ariel",12,"bold"))
+equal.place(x=110,y=80)
+
+
+
+kil_result=Label(text=0)
+kil_result.place(x=200,y=80)
+
+
+
+E2=Entry(window,width=5)
+E2.place(x=190,y=55)
+
+
+
+
+def button_click():
+    number=int(E2.get())
+    calculate = (number * 1.6)
+    kil_result.config(text=f"{calculate}")
+
+
+
+
+button=Button(text="Calculate",command=button_click)
+button.place(x=170,y=100)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+window.mainloop()
